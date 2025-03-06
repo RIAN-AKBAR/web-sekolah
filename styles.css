@@ -21,6 +21,7 @@ header {
 
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -59,7 +60,8 @@ nav ul li a:hover {
 h1 {
     margin-bottom: 20px;
 }
-/*input tugas*/
+
+/* Container untuk input tugas */
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -67,10 +69,6 @@ h1 {
     padding: 40px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
 }
 
 input[type="text"] {
@@ -157,4 +155,59 @@ li:hover {
 
 .delete-btn:hover {
     background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Tampilan untuk layar kecil (mobile) */
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    input[type="text"] {
+        padding: 15px;
+    }
+
+    button {
+        padding: 15px;
+    }
+
+    .task-buttons {
+        flex-direction: column;
+    }
+
+    .edit-btn, .delete-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Tampilan untuk layar besar (desktop) */
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    .container {
+        padding: 40px;
+    }
+
+    .task-buttons {
+        flex-direction: row;
+    }
+
+    .edit-btn, .delete-btn {
+        width: auto;
+        margin-right: 10px;
+    }
 }
